@@ -1,4 +1,4 @@
-﻿angular.module('vtortola.ng-terminal', [])
+angular.module('vtortola.ng-terminal', [])
 
 .provider('terminalConfiguration', function () {
     
@@ -270,7 +270,7 @@
     }
 }])
 
-.directive('terminal', function ($document) {
+.directive('terminal', ['$document', function ($document) {
     return {
         restrict: 'E',
         controller: 'terminalController',
@@ -455,5 +455,4 @@
             }
         }
     }
-})
-;
+}]);
